@@ -3,7 +3,13 @@
 
 import pandas as pd 
 import numpy as np 
-import matplotlib 
+import matplotlib.pyplot as plt 
 
 
-filename = 'iris.data'
+filename = 'pands-project\iris.data' 
+with open (filename, "rt") as f: 
+    data = pd.read_csv(filename)
+    cols = ['sepal length', 'sepal width', 'petal length', 'petal width']
+    print (data)
+
+
