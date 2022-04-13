@@ -11,7 +11,6 @@ The information that is included in the data set is as follows:
 2) Sepal width in cm 
 3) Petal length in cm 
 4) Petal width in cm 
-5) Class of flower:
-                     A) Iris Setosa, B) Iris Versicolour and C) Iris Virginica
+5) Class of flower: A) Iris Setosa, B) Iris Versicolour and C) Iris Virginica
 
 **<p align="center"> References**
