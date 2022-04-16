@@ -12,21 +12,25 @@ import seaborn as sns
 # and added to the repository for handiness.
 
 filename = 'iris.data' 
+columns = ['Sepal Length','Sepal Width','Petal Length','Petal Width','Type'] 
 
 # I open the file in read mode so that we can extrapolate the data from the data set. I ensure that the mode is set to 'rt' or 
 # read text mode; to ensure no overwriting of the data within the file occurs.
+# Upon opening the file I then designate the columns of information so that they are easily readable. This information can be found at the top of the program below filename.
+# I found the column headings in the original website description.
+    
 with open (filename, "rt") as f: 
-    data = pd.read_csv(filename, header=None)
-
-# upon opening the file I then designate the columns of information so that they are easily readable. I found the colum headings in the original website description.
+    data = pd.read_csv(filename, header=None, names=columns)
     print (data)
-    data.columns = ['Sepal Length','Sepal Width','Petal Length','Petal Width','Type']
+    
 # I then ask the program to break the information down into more readable chunks - I do this by asking it to define the grouping (ie. the 3 different types of flower)
 # so that the user of the program has the data at hand from the offset.
+
     print("Number of Samples available for each type: ")
 
 # I then ask the program to count the information from the file, and using the headings ('Petal length' etc.) find the median, mean and max numbers of the information available
 # This is done below by using the 'describe' function.
+
     print (data['Type'].value_counts())
     print(' ')
     print (data.describe())
@@ -48,6 +52,9 @@ sns.FacetGrid(data,hue="Type",height=5).map(sns.histplot,"Petal Width").add_lege
 sns.FacetGrid(data,hue="Type",height=5).map(sns.histplot,"Sepal Length").add_legend()
 sns.FacetGrid(data,hue="Type",height=5).map(sns.histplot,"Sepal Width").add_legend()
 plt.show()
+
+iris_setosa.plot(kind = "scatter", x="Sepal Length", y="Count")
+plt.show
 
 # I then made a combination of the above to make a 'pair plot' which combines the information above from the 3 data sets and creates contrasting histogram and scatter plots.
 
