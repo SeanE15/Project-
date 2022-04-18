@@ -39,4 +39,4 @@ https://www.qimacros.com/histogram-excel/how-to-determine-histogram-bin-interval
 
 https://datatofish.com/plot-histogram-python/ 
 
-https://seaborn.pydata.org/generated/seaborn.pairplot.html 
+https://seaborn.pydata.org/generated/seaborn.pairplot.html  
