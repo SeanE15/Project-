@@ -1,9 +1,11 @@
 # This is a program that will analyse the data from the Fisher Iris Data set.
 # Author: Sean Elliott                                    
 
+from optparse import TitledHelpFormatter
 import pandas as pd 
 import numpy as np 
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+from regex import P 
 import seaborn as sns 
 
 # I start by importing the pands, numpy, seaborn and matplotlib libraries to help 
@@ -82,21 +84,25 @@ iris_versicolor = iris.loc[iris["Type"]=="Iris-versicolor"]
 # This had been throwing off the results of my scatter plot, once rectified the results came out correct. This hadn't been an issue previously as the information for the histograms was 
 # coming from the entire 'iris' dataset instead of individual 'type' subheadings.  
 
-palette = sns.color_palette("bright", 4)
+sns.scatterplot(data = iris_setosa, x= "Sepal Length", y = "Sepal Width", hue = "Sepal Length", palette = "bright", legend = True)
+plt.suptitle("Iris Setosa Sepal Length/Sepal Width")
 
-sns.scatterplot(data = iris_setosa, x= "Sepal Length", y = "Sepal Width", style = "Type", palette = palette)
+sns.scatterplot(data = iris_virginica, x= "Sepal Length", y = "Sepal Width", hue = "Sepal Length", palette = "bright", legend = True)
+plt.suptitle("Iris Virginica Sepal Length/Sepal Width")
 
-#sns.scatterplot(data = iris_virginica, x= "Sepal Length", y = "Sepal Width", style = "Type")
+sns.scatterplot(data = iris_versicolor, x= "Sepal Length", y = "Sepal Width", hue = "Sepal Length", palette = "bright", legend = True)
+plt.suptitle("Iris Versicolor Sepal Length/Sepal Width")
 
-#sns.scatterplot(data = iris_versicolor, x= "Sepal Length", y = "Sepal Width", style = "Type")
+plt.savefig('seanelliottSLSW.png', dpi = 500)
 
-#plt.savefig('seanelliottSLSW.png', dpi = 500)
+#sns.scatterplot(data = iris_setosa, x= "Petal Length", y = "Petal Width",hue = "Petal Length", palette = "bright", legend = True)
+#plt.suptitle("Iris Setosa Petal Length/Petal Width")
 
-#sns.scatterplot(data = iris_setosa, x= "Petal Length", y = "Petal Width", style = "Type")
+#sns.scatterplot(data = iris_virginica, x= "Petal Length", y = "Petal Width", hue = "Petal Length", palette = "bright", legend = True)
+#plt.suptitle("Iris Virginica Sepal Length/Sepal Width")
 
-#sns.scatterplot(data = iris_virginica, x= "Petal Length", y = "Petal Width", style = "Type")
-
-#sns.scatterplot(data = iris_versicolor, x= "Petal Length", y = "Petal Width", style = "Type")
+#sns.scatterplot(data = iris_versicolor, x= "Petal Length", y = "Petal Width", hue = "Petal Length", palette = "bright", legend = True)
+#plt.suptitle("Iris Versicolor Sepal Length/Sepal Width")
 
 #plt.savefig('seanelliottPLPW.png', dpi = 500)
 
