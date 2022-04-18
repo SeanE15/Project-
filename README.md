@@ -40,3 +40,9 @@ https://www.qimacros.com/histogram-excel/how-to-determine-histogram-bin-interval
 https://datatofish.com/plot-histogram-python/ 
 
 https://seaborn.pydata.org/generated/seaborn.pairplot.html  
+
+https://www.delftstack.com/howto/seaborn/legend-seaborn-plot/
+
+https://stackoverflow.com/questions/36018681/stop-seaborn-plotting-multiple-figures-on-top-of-one-another 
+
+https://seaborn.pydata.org/tutorial/function_overview.html
