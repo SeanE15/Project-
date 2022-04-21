@@ -76,7 +76,6 @@ sns.scatterplot(data = iris_virginica, x= "Sepal Length", y = "Sepal Width", leg
 sns.scatterplot(data = iris_versicolor, x= "Sepal Length", y = "Sepal Width", legend = True)
 plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
 plt.suptitle("Iris Setosa, Virginica and Versicolour Sepal Length/Sepal Width")
-plt.show()
 plt.savefig('seanelliottSLSW.png', dpi = 500)
 plt.clf()
 
@@ -89,10 +88,11 @@ sns.scatterplot(data = iris_virginica, x= "Petal Length", y = "Petal Width", leg
 sns.scatterplot(data = iris_versicolor, x= "Petal Length", y = "Petal Width", legend = True)
 plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
 plt.suptitle("Iris Setosa, Virginica and Versicolour Petal Length/Petal Width")
-plt.show()
 plt.savefig('seanelliottPLPW.png', dpi = 500)
 plt.clf()
 
+# Upon pushing to github I found that the plt.show() function was overwriting the scatterplots that were being sent to the repository. I editted this and will check again later, 
+# as the scatterplots are an essential part of the assignment.
 # I then made a combination of the above to make a 'pair plot' which combines the information above from the 3 data sets and creates contrasting histogram (with trend lines) and scatter plots.
 
 sns.set_style("darkgrid")
