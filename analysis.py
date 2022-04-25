@@ -98,22 +98,32 @@ plt.clf()
 sns.set_style("darkgrid")
 sns.pairplot(iris,hue="Type",height=4)
 plt.show()
+plt.clf()
 
-# As an added bonus I have decided to add a boxplot to try something different. This is the same analysis as above - however it represents the data in a different way than the histograms/scatter plots.  
+# I also came across a 'joint plot' on the seaborn website which I thought was a very interesting way of compairing the data. Below I ask the program to compare Petal Length and Sepal length across
+# the three species. I am particularly drawn to the representation of the data with the scatterplot in the middle with the trendlines on the exterior.
+
+sns.jointplot(data=iris, x = "Petal Length", y = "Sepal Length", hue = "Type")
+plt.suptitle("Jointplot of Petal Length vs Sepal length")
+plt.show()
+plt.clf()
+
+# I have decided to add a boxplot to try something different. This is the same analysis as above - however it represents the data in a different way than the histograms/scatter plots.  
 
 sns.set(style="darkgrid", palette="deep")
-f, axes = plt.subplots(2, 2, sharey=False, figsize=(12, 8))
-f, axes = plt.subplots(2, 2, sharey=False, figsize=(12, 8))
+f, axes = plt.subplots(2, 2, sharey=False, figsize=(12, 8)) 
+
+# The line of code above provides the information for the plotting fo the boxplot - this includes the size of the figures and the labeling of the axes. The break down of the code is as follows:
+# the 2,2 designates the number of plots on display in a 2x2 grid. The sharey= False tells the program that each graph has different units of measurement (so that they don't go off the one size)
+# This makes the graphs easy to read and compare. The figsize determine what size the plots will print out for the user.
+
 sns.boxplot(x="Type", y="Petal Length",hue = "Type",data=iris, ax=axes[0,0])
 sns.boxplot(x="Type", y="Sepal Length", data=iris, ax=axes[0,1])
 sns.boxplot(x="Type", y="Petal Width",data=iris, ax=axes[1,0])
 sns.boxplot(x="Type", y="Sepal Width", data=iris, ax=axes[1,1])
+
+# Above you will see that we tell the program where to harvest the data from, and how we want each axis to be labelled. 
+
 plt.suptitle("Boxplot of the Petal and Sepal measurements")
 plt.show()
-
-# I also came accross a 'joint plot' on the seaborn website which I thought was a very interesting way of compairing the data. Below I ask the program to compare Petal Length and Sepal length across
-# the three species. I am particularly drawn to the representation of the data with the scatterplot in the middle with the trendlines on the exterior.
-
-sns.jointplot(data=iris, x = "Petal Length", y = "Sepal Length", hue = "Type")
-plt.show()
- 
+plt.clf()
