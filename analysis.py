@@ -34,9 +34,9 @@ with open (filename, "rt") as f:
     print (iris['Type'].value_counts())
     print(' ')
     print (iris.describe())
+    print (' ') 
     print (iris.groupby("Type").corr())
-
-   
+    
 # We then start by organising the data within the file to start making sense of the data. This is done below by telling the program the location of the data we wish to seperate and analyse.
 # For example the iris_setosa will be found the in data file provided, under the heading of 'Type' - which the program will group information for those with the distinction 
 # of 'Iris Setosa'. The data.loc function is used to allow the program to locate this 'data' within the file (iris.data).
@@ -50,11 +50,13 @@ iris_versicolor = iris.loc[iris["Type"]=="Iris-versicolor"]
 # end of the code to show the legend for the different colours/flower type. The 'height' setting modifies the size of the output histogram for viewing.
 
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Length").add_legend()
+plt.savefig('seanelliottPL.png', dpi = 500)
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Width").add_legend()
+plt.savefig('seanelliottPW.png', dpi = 500)
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Length").add_legend()
+plt.savefig('seanelliottSL.png', dpi = 500)
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Width").add_legend()
-plt.show()
-plt.clf
+plt.savefig('seanelliottSW.png', dpi = 500)
 
 # I also wrote below a different output which looks to me more appealing that the simple hsitograms - I create a distplot instead of a histplot above. I prefer the look of the dist plot 
 # and the trend line makes the plot more engaging to read (in my opinion...)
@@ -76,7 +78,7 @@ sns.scatterplot(data = iris_virginica, x= "Sepal Length", y = "Sepal Width", leg
 sns.scatterplot(data = iris_versicolor, x= "Sepal Length", y = "Sepal Width", legend = True)
 plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
 plt.suptitle("Iris Setosa, Virginica and Versicolour Sepal Length/Sepal Width")
-plt.savefig('seanelliottSLSW.png', dpi = 500)
+plt.show()
 plt.clf()
 
 
@@ -88,7 +90,7 @@ sns.scatterplot(data = iris_virginica, x= "Petal Length", y = "Petal Width", leg
 sns.scatterplot(data = iris_versicolor, x= "Petal Length", y = "Petal Width", legend = True)
 plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
 plt.suptitle("Iris Setosa, Virginica and Versicolour Petal Length/Petal Width")
-plt.savefig('seanelliottPLPW.png', dpi = 500)
+plt.show()
 plt.clf()
 
 # Upon pushing to github I found that the plt.show() function was overwriting the scatterplots that were being sent to the repository. I editted this and will check again later, 
