@@ -54,13 +54,13 @@ iris_versicolor = iris.loc[iris["Type"]=="Iris-versicolor"]
 # end of the code to show the legend for the different colours/flower type. The 'height' setting modifies the size of the output histogram for viewing.
 
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Length").add_legend()
-plt.savefig('seanelliottPL.png', dpi = 500)
+plt.savefig('seanelliottPL.png', dpi = 100)
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Width").add_legend()
-plt.savefig('seanelliottPW.png', dpi = 500)
+plt.savefig('seanelliottPW.png', dpi = 100)
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Length").add_legend()
-plt.savefig('seanelliottSL.png', dpi = 500)
+plt.savefig('seanelliottSL.png', dpi = 100)
 sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Width").add_legend()
-plt.savefig('seanelliottSW.png', dpi = 500)
+plt.savefig('seanelliottSW.png', dpi = 100)
 
 # I also wrote below a different output which looks to me more appealing that the simple hsitograms - I create a distplot instead of a histplot above. I prefer the look of the dist plot 
 # and the trend line makes the plot more engaging to read (in my opinion...)
