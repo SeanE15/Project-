@@ -19,24 +19,28 @@ columns = ['Sepal Length','Sepal Width','Petal Length','Petal Width','Type']
 # Upon opening the file I then designate the columns of information so that they are easily readable. This information can be found at the top of the program below filename.
 # I found the column headings in the original website description.
     
-with open (filename, "rt") as f: 
+with open (filename, "r") as f: 
     iris = pd.read_csv(filename, header=None, names=columns)
-    
-# I then ask the program to break the information down into more readable chunks - I do this by asking it to define the grouping (ie. the 3 different types of flower)
-# so that the user of the program has the data at hand from the offset.
+  
+# I then ask the program to break the information down into more readable chunks - I do this by asking the program to define the grouping (ie. the 3 different types of flower)
+# so that the user of the program has the data at hand from the offset and to print this summary into the irisSummary.txt file.
 
-    print("Number of Samples available for each type: ")
+    print(" This is the summary file of Fisher's Iris Dat Set; ", file=open("irisSummary.txt", "w"))
+    print(" ", file=open("irisSummary.txt", "a"))
+    print("Number of Samples available for each type: ", file=open("irisSummary.txt", "a"))
+    print(" ", file=open("irisSummary.txt", "a"))
 
 # I then ask the program to count the information from the file, and using the headings ('Petal length' etc.) find the median, mean and max numbers of the information available
-# This is done below by using the 'describe' function. I also add a line to gett he program to group the three species by their 'Type' aand use the .corr() function to find the pairwise
+# This is done below by using the 'describe' function. I then get the program to print the representation of this data to the irisSummary.txt file. I do this for the 3 summaries.
+# I also add a line to get the program to group the three species by their 'Type' aand use the .corr() function to find the pairwise
 # correlation of all the columns in the dataframe while also ignoring any non numeric data.
-
-    print (iris['Type'].value_counts())
-    print(' ')
-    print (iris.describe())
-    print (' ') 
-    print (iris.groupby("Type").corr())
     
+    print(iris['Type'].value_counts(), file=open("irisSummary.txt", "a"))
+    print(' ', file=open("irisSummary.txt", "a"))
+    print(iris.describe, file=open("irisSummary.txt", "a"))
+    print (' ', file=open("irisSummary.txt", "a")) 
+    print(iris.groupby("Type").corr(), file=open("irisSummary.txt", "a"))
+
 # We then start by organising the data within the file to start making sense of the data. This is done below by telling the program the location of the data we wish to seperate and analyse.
 # For example the iris_setosa will be found the in data file provided, under the heading of 'Type' - which the program will group information for those with the distinction 
 # of 'Iris Setosa'. The data.loc function is used to allow the program to locate this 'data' within the file (iris.data).
@@ -99,6 +103,7 @@ plt.clf()
 
 sns.set_style("darkgrid")
 sns.pairplot(iris,hue="Type",height=4)
+plt.close(1)
 plt.show()
 plt.clf()
 
@@ -107,6 +112,7 @@ plt.clf()
 
 sns.jointplot(data=iris, x = "Petal Length", y = "Sepal Length", hue = "Type")
 plt.suptitle("Jointplot of Petal Length vs Sepal length")
+plt.close(1)
 plt.show()
 plt.clf()
 
@@ -115,8 +121,8 @@ plt.clf()
 sns.set(style="darkgrid", palette="deep")
 f, axes = plt.subplots(2, 2, sharey=False, figsize=(12, 8)) 
 
-# The line of code above provides the information for the plotting fo the boxplot - this includes the size of the figures and the labeling of the axes. The break down of the code is as follows:
-# the 2,2 designates the number of plots on display in a 2x2 grid. The sharey= False tells the program that each graph has different units of measurement (so that they don't go off the one size)
+# The code above provides the information for the plotting of the boxplot - this includes the size of the figures and the labeling of the axes. The break down of the code is as follows:
+#  We start by creating a subplot within the plot. The 2,2 designates the number of plots on display in a 2x2 grid. The sharey=False tells the program that each graph has different units of measurement (so that they don't go off the one size)
 # This makes the graphs easy to read and compare. The figsize determine what size the plots will print out for the user.
 
 sns.boxplot(x="Type", y="Petal Length",hue = "Type",data=iris, ax=axes[0,0])
@@ -125,7 +131,10 @@ sns.boxplot(x="Type", y="Petal Width",data=iris, ax=axes[1,0])
 sns.boxplot(x="Type", y="Sepal Width", data=iris, ax=axes[1,1])
 
 # Above you will see that we tell the program where to harvest the data from, and how we want each axis to be labelled. 
+# I then added the title of the box plot below. I added the 'plt.close(1)' line to close empty plot which the program was producing (which is called figure 1). 
+# The program was printing these for the pairplot, jointplot and boxplots, however the line below fixed the program. I have since added the 'plt.close(1)' line to the above offenders.
 
 plt.suptitle("Boxplot of the Petal and Sepal measurements")
+plt.close(1)
 plt.show()
 plt.clf()

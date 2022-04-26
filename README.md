@@ -32,7 +32,7 @@ According to the dataset the Iris Virginica has much longer and wider petals tha
 
 **<p align="center"> Walkthrough of Program**
 
-I found this quite a challenging program to write. It combined many aspects fo the course which we had covered, but also required me to learn how to use seaborn - which I found to be an excellent tool for data visualisation. The program starts by reading in the dataset 'iris.data' and outputs a summary of the data to a single text file. I then go on to analyse the data in various ways using the 3 species of Iris Flower; Iris Setosa, Iris Virginica and Iris Versicolor.
+I found this quite a challenging program to write. It combined many aspects of the course which we had covered, but also required me to learn how to use seaborn - which I found to be an excellent tool for data visualisation and analysis. The program starts by reading in the dataset 'iris.data' and outputs a summary of the raw data to a single text file. I then go on to analyse the data in various ways using the 3 species of Iris Flower; Iris Setosa, Iris Virginica and Iris Versicolor.
 
 Using seaborn I started by creating a histogram plot of the three species of flower, comparing sepal length, sepal width, petal length and petal width across the three species. I then created a distplot which combines the above histogram with a trendline running through it. I found this to be more visually appealing than just the histogram plot on it's own.
 
@@ -85,4 +85,8 @@ https://www.geeksforgeeks.org/python-pandas-dataframe-corr/
 https://seaborn.pydata.org/generated/seaborn.boxplot.html 
 
 https://seaborn.pydata.org/tutorial/function_overview.html
+
+https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8 
+
+https://stackoverflow.com/questions/54959764/seaborn-factorplot-generates-extra-empty-plots-below-actual-plot 
 
