@@ -53,13 +53,13 @@ iris_versicolor = iris.loc[iris["Type"]=="Iris-versicolor"]
 # the histogram - using the hue parameter will allow us to represent any overlaps in the data. We then add the axes label the same as in matplotlib and make sure we append .add_legend to the 
 # end of the code to show the legend for the different colours/flower type. The 'height' setting modifies the size of the output histogram for viewing.
 
-sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Length").add_legend()
+sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Petal Length").add_legend()
 plt.savefig('seanelliottPL.png', dpi = 100)
-sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Width").add_legend()
+sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Petal Width").add_legend()
 plt.savefig('seanelliottPW.png', dpi = 100)
-sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Length").add_legend()
+sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Sepal Length").add_legend()
 plt.savefig('seanelliottSL.png', dpi = 100)
-sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Width").add_legend()
+sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Sepal Width").add_legend()
 plt.savefig('seanelliottSW.png', dpi = 100)
 
 # I also wrote below a different output which looks to me more appealing that the simple hsitograms - I create a distplot instead of a histplot above. I prefer the look of the dist plot 
