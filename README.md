@@ -4,7 +4,7 @@ This project concerns the well-known Fisher’s Iris data set. You must research
 
 According to 'https://archive.ics.uci.edu/ml/datasets/iris':
 
-"This is perhaps the best known database to be found in the pattern recognition literature. Fisher's paper is a classic in the field and is referenced frequently to this day. ... The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other." 
+"This is perhaps the best known database to be found in the pattern recognition literature. Fisher's paper is a classic in the field and is referenced frequently to this day. ... The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other."
 
 According to 'https://rpubs.com/AjinkyaUC/Iris_DataSet': 
 
@@ -20,7 +20,7 @@ The information that is included in the data set is as follows:
 
 
 <p align = "center">
-    <img src = "https://miro.medium.com/max/1400/1*f6KbPXwksAliMIsibFyGJw.png" width = "350" title = "hover text">
+    <img src = "https://miro.medium.com/max/1400/1*f6KbPXwksAliMIsibFyGJw.png" width = "600" title = "hover text">
 
 **<p align="center"> Analysis of Results**
 
