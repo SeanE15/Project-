@@ -19,6 +19,9 @@ The information that is included in the data set is as follows:
 5) Class of flower: A) Iris Setosa, B) Iris Versicolour and C) Iris Virginica
 
 
+<p align = "center">
+    <img src = "https://miro.medium.com/max/1400/1*f6KbPXwksAliMIsibFyGJw.png" width = "350" title = "hover text">
+
 **<p align="center"> Analysis of Results**
 
 From what we can see from the dataset above - when passed through the program that I have written it has produces a range of results about the 3 species of Iris.

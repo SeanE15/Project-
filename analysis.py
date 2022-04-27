@@ -20,8 +20,8 @@ columns = ['Sepal Length','Sepal Width','Petal Length','Petal Width','Type']
 # I found the column headings in the original website description.
     
 with open (filename, "r") as f: 
-    iris = pd.read_csv(filename, header=None, names=columns)
-  
+    iris = pd.read_csv(filename, sep= ',', header=None, names=columns)
+    
 # I then ask the program to break the information down into more readable chunks - I do this by asking the program to define the grouping (ie. the 3 different types of flower)
 # so that the user of the program has the data at hand from the offset and to print this summary into the irisSummary.txt file.
 
@@ -37,8 +37,8 @@ with open (filename, "r") as f:
     
     print(iris['Type'].value_counts(), file=open("irisSummary.txt", "a"))
     print(' ', file=open("irisSummary.txt", "a"))
-    print(iris.describe, file=open("irisSummary.txt", "a"))
-    print (' ', file=open("irisSummary.txt", "a")) 
+    #print(iris.describe, file=open("irisSummary.txt", "a"))
+    #print (' ', file=open("irisSummary.txt", "a")) 
     print(iris.groupby("Type").corr(), file=open("irisSummary.txt", "a"))
 
 # We then start by organising the data within the file to start making sense of the data. This is done below by telling the program the location of the data we wish to seperate and analyse.
@@ -54,13 +54,13 @@ iris_versicolor = iris.loc[iris["Type"]=="Iris-versicolor"]
 # end of the code to show the legend for the different colours/flower type. The 'height' setting modifies the size of the output histogram for viewing.
 
 sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Petal Length").add_legend()
-plt.savefig('seanelliottPL.png', dpi = 100)
+plt.savefig('seanelliottPL.png', dpi = 500)
 sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Petal Width").add_legend()
-plt.savefig('seanelliottPW.png', dpi = 100)
+plt.savefig('seanelliottPW.png', dpi = 500)
 sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Sepal Length").add_legend()
-plt.savefig('seanelliottSL.png', dpi = 100)
+plt.savefig('seanelliottSL.png', dpi = 500)
 sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Sepal Width").add_legend()
-plt.savefig('seanelliottSW.png', dpi = 100)
+plt.savefig('seanelliottSW.png', dpi = 500)
 
 # I also wrote below a different output which looks to me more appealing that the simple hsitograms - I create a distplot instead of a histplot above. I prefer the look of the dist plot 
 # and the trend line makes the plot more engaging to read (in my opinion...)
