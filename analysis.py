@@ -40,9 +40,11 @@ with open (filename, "r") as f:
     print(iris.describe(include=[np.number]), file=open("irisSummary.txt", "a"))
     print(' ', file=open("irisSummary.txt", "a")) 
     print('The mean values of the three species are displayed below: ', file=open("irisSummary.txt", "a"))
+    print(" ", file=open("irisSummary.txt", "a"))
     print(iris.groupby("Type").mean(), file=open("irisSummary.txt", "a"))
     print(' ', file=open("irisSummary.txt", "a")) 
     print('The correlation between the values of the three species are displayed below: ', file=open("irisSummary.txt", "a"))
+    print(" ", file=open("irisSummary.txt", "a"))
     print(iris.groupby("Type").corr(), file=open("irisSummary.txt", "a"))
 
 
@@ -58,13 +60,13 @@ iris_versicolor = iris.loc[iris["Type"]=="Iris-versicolor"]
 # the histogram - using the hue parameter will allow us to represent any overlaps in the data. We then add the axes label the same as in matplotlib and make sure we append .add_legend to the 
 # end of the code to show the legend for the different colours/flower type. The 'height' setting modifies the size of the output histogram for viewing.
 
-sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Petal Length").add_legend()
+sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Length").add_legend()
 plt.savefig('seanelliottPL.png', dpi = 500)
-sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Petal Width").add_legend()
+sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Petal Width").add_legend()
 plt.savefig('seanelliottPW.png', dpi = 500)
-sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Sepal Length").add_legend()
+sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Length").add_legend()
 plt.savefig('seanelliottSL.png', dpi = 500)
-sns.FacetGrid(iris,hue="Type",height=4).map(sns.histplot,"Sepal Width").add_legend()
+sns.FacetGrid(iris,hue="Type",height=5).map(sns.histplot,"Sepal Width").add_legend()
 plt.savefig('seanelliottSW.png', dpi = 500)
 
 # I also wrote below a different output which looks to me more appealing that the simple hsitograms - I create a distplot instead of a histplot above. I prefer the look of the dist plot 
@@ -77,7 +79,7 @@ sns.FacetGrid(iris,hue="Type",height=5).map(sns.distplot,"Sepal Width").add_lege
 plt.show()
 plt.clf()
 
-# At this point I had to change the file name in the program from 'data' to 'iris' as it was confusing the program when it came to plotting the scatter plots (ie. could not have two itterations of 'data')
+# At this point I had to change the file name in the program from 'data' to 'iris' as it was confusing the program when it came to plotting the scatterplots (ie. could not have two itterations of 'data')
 # This is shown below and throughout the program above. I also noticed that in the previous itteration of the program I had mislabeled the 'Type' with capital Letters instead of lower case.
 # This had been throwing off the results of my scatter plot, once rectified the results came out correct. This hadn't been an issue previously as the information for the histograms was 
 # coming from the entire 'iris' dataset instead of individual 'type' subheadings.  
@@ -87,6 +89,38 @@ sns.scatterplot(data = iris_virginica, x= "Sepal Length", y = "Sepal Width", leg
 sns.scatterplot(data = iris_versicolor, x= "Sepal Length", y = "Sepal Width", legend = True)
 plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
 plt.suptitle("Iris Setosa, Virginica and Versicolour Sepal Length/Sepal Width")
+plt.show()
+plt.clf()
+
+sns.scatterplot(data = iris_setosa, x = "Petal Length", y = "Sepal Length", legend = True)
+sns.scatterplot(data = iris_virginica, x = "Petal Length", y = "Sepal Length", legend = True)
+sns.scatterplot(data = iris_versicolor, x = "Petal Length", y = "Sepal Length", legend = True)
+plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
+plt.suptitle("Iris Setosa, Virginica and Versicolour Petal Length/Sepal Length")
+plt.show()
+plt.clf()
+
+sns.scatterplot(data = iris_setosa, x = "Petal Width", y = "Sepal Width", legend = True)
+sns.scatterplot(data = iris_virginica, x = "Petal Width", y = "Sepal Width", legend = True)
+sns.scatterplot(data = iris_versicolor, x = "Petal Width", y = "Sepal Width", legend = True)
+plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
+plt.suptitle("Iris Setosa, Virginica and Versicolour Petal Width/Sepal Width")
+plt.show()
+plt.clf()
+
+sns.scatterplot(data = iris_setosa, x = "Petal Length", y = "Sepal Width", legend = True)
+sns.scatterplot(data = iris_virginica, x = "Petal Length", y = "Sepal Width", legend = True)
+sns.scatterplot(data = iris_versicolor, x = "Petal Length", y = "Sepal Width", legend = True)
+plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
+plt.suptitle("Iris Setosa, Virginica and Versicolour Petal Length/Sepal Width")
+plt.show()
+plt.clf()
+
+sns.scatterplot(data = iris_setosa, x = "Sepal Length", y = "Petal Width", legend = True)
+sns.scatterplot(data = iris_virginica, x = "Sepal Length", y = "Petal Width", legend = True)
+sns.scatterplot(data = iris_versicolor, x = "Sepal Length", y = "Petal Width", legend = True)
+plt.legend(labels=["Iris Setosa", "Iris Virginica", "Iris Versicolor"])
+plt.suptitle("Iris Setosa, Virginica and Versicolour Sepal Length/Petal Width")
 plt.show()
 plt.clf()
 

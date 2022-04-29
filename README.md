@@ -31,15 +31,19 @@ came between 5cm and 7cm in length, with the mean measurement coming in at 5.84c
 
 Petal Length and Width provide much starker sets of information. Iris Setosa's petal sizes, both in width and length were dwarfed by the other two species - with petal length of between 1cm and 2cm - with the average being 1.5cm and the average petal width being between 0.1cm and 0.5cm. According to the dataset provided the Iris Versicolor has longer petals starting at 3cm and finishing just over 5cm in length - with the average being 4.00cm. The petal width measurements were between 1.0cm and 1.75cm respectively in the Iris Versicolor, with an average measurement of 1.375cm.
 
-According to the dataset the Iris Virginica has much longer and wider petals than the other two species - the average petal length ranged between 5cm and 7cm with the average being 6cm, while the petal width went from 1.5cm to 2.5cm - with the average being 2cm in width. Compared to the setosa the Virginica also has longer sepal length from 5.5cm to 8cm in length. The Sepal width in the Virginica was also fairly average - spanning from 2.5cm to 3.75cm in width with the average reading being 3.0cm.
+According to the dataset the Iris Virginica has much longer and wider petals than the other two species - the average petal length ranged between 5cm and 7cm with the average being 5.5cm, while the petal width went from 1.5cm to 2.5cm - with the average being 2cm in width. Compared to the Setosa the Virginica also has longer sepal length from 5.5cm to 8cm in length. The Sepal width in the Virginica was also fairly average - spanning from 2.5cm to 3.75cm in width with the average reading being 3.0cm.
+
+<p align = "center">
+    <img src = "https://miro.medium.com/max/700/1*pVEZeY3VDFbHDIAfobT5ow.png" width = "600" title = "hover text">
+
 
 **<p align="center"> Walkthrough of Program**
 
 I found this quite a challenging program to write. It combined many aspects of the course which we had covered, but also required me to learn how to use seaborn - which I found to be an excellent tool for data visualisation and analysis. The program starts by reading in the dataset 'iris.data' and outputs a summary of the raw data to a single text file. I then go on to analyse the data in various ways using the 3 species of Iris Flower; Iris Setosa, Iris Virginica and Iris Versicolor.
 
-Using seaborn I started by creating a histogram plot of the three species of flower, comparing sepal length, sepal width, petal length and petal width across the three species. I then created a distplot which combines the above histogram with a trendline running through it. I found this to be more visually appealing than just the histogram plot on it's own.
+Using seaborn I started by creating a histogram plot of the three species of flower, comparing sepal length, sepal width, petal length and petal width across the three species. I also then allow the program to save the histograms as .png files to the repository for viewing. I then created a distplot which combines the above histogram with a trendline running through it. I found this to be more visually appealing than just the histogram plot on it's own.
 
-I then went on to create a scatterplot of the 3 species which would help me to compare the sepal length/sepal width and the petal length/petal width of the 3 species. I included a legend with each scatterplot and made sure to correctly label the axes to avoid any confusion. I also then allow the program to save the two scatterplots as .png files to the repository for viewing.
+I then went on to create a scatterplot of the 3 species which would help me to compare the sepal length/sepal width and the petal length/petal width of the 3 species. There are 6 itterations/comparison scatterplots of the data which are displayed when the program is run. I included a legend with each scatterplot and made sure to correctly label the axes to avoid any confusion.
 
 I then created a pairplot - this is a combination all of the above data - combining the scatter plots and also distplots to show all of the information in one place. I found this to be particularly appealing to look at and found that it helped give me a much wider view of the information contained within the dataset.
 
@@ -93,3 +97,8 @@ https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8
 
 https://stackoverflow.com/questions/54959764/seaborn-factorplot-generates-extra-empty-plots-below-actual-plot 
 
+https://towardsdatascience.com/4-pandas-groupby-tricks-you-should-know-9e5b9870693e 
+
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html 
+
+https://realpython.com/python-csv/ 
