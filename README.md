@@ -33,8 +33,10 @@ Petal Length and Width provide much starker sets of information. Iris Setosa's p
 
 According to the dataset the Iris Virginica has much longer and wider petals than the other two species - the average petal length ranged between 5cm and 7cm with the average being 5.5cm, while the petal width went from 1.5cm to 2.5cm - with the average being 2cm in width. Compared to the Setosa the Virginica also has longer sepal length from 5.5cm to 8cm in length. The Sepal width in the Virginica was also fairly average - spanning from 2.5cm to 3.75cm in width with the average reading being 3.0cm.
 
+Below shows an example of one of the scatterplots outputted byt he program. It shows a a comparison between Petal Length and Petal Width across the three species:
+
 <p align = "center">
-    <img src = "https://miro.medium.com/max/700/1*pVEZeY3VDFbHDIAfobT5ow.png" width = "600" title = "hover text">
+    <img src = "https://github.com/SeanE15/pands-project/blob/main/seanelliottPLPW.png" width = "600" title = "hover text">
 
 
 **<p align="center"> Walkthrough of Program**
