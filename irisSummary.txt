@@ -18,6 +18,7 @@ min        4.300000     2.000000      1.000000     0.100000
 max        7.900000     4.400000      6.900000     2.500000
  
 The mean values of the three species are displayed below: 
+ 
                  Sepal Length  Sepal Width  Petal Length  Petal Width
 Type                                                                 
 Iris-setosa             5.006        3.418         1.464        0.244
@@ -25,6 +26,7 @@ Iris-versicolor         5.936        2.770         4.260        1.326
 Iris-virginica          6.588        2.974         5.552        2.026
  
 The correlation between the values of the three species are displayed below: 
+ 
                               Sepal Length  Sepal Width  Petal Length  Petal Width
 Type                                                                              
 Iris-setosa     Sepal Length      1.000000     0.746780      0.263874     0.279092

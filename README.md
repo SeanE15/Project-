@@ -24,16 +24,16 @@ The information that is included in the data set is as follows:
 
 **<p align="center"> Analysis of Results**
 
-From what we can see from the dataset above - when passed through the program that I have written it has produces a range of results about the 3 species of Iris.
+From what we can see from the dataset above - when passed through the program that I have written it has produced a range of results about the 3 species of Iris.
 When comparing Sepal Length the Iris Virginica had some of the larger varieties found on the particular day that the information was collected. However the general 
 sepal length of the 3 species seems to be, on average, fairly consistent (with a few irregularities here and there.) Generally in Sepal Length the majority of Iris' measured 
-came between 5cm and 7cm in length, with the mean measurement coming in at 5.84cm. The same could be said for Sepal Width, with the majority of flowers coming in between 2.5cm and 3.5cm with the mean measurement being 3.05cm.
+fell between 5cm and 7cm in length, with the mean measurement coming in at 5.84cm. The same could be said for Sepal Width, with the majority of flowers falling between 2.5cm and 3.5cm with the mean measurement being 3.05cm.
 
-Petal Length and Width provide much starker sets of information. Iris Setosa's petal sizes, both in width and length were dwarfed by the other two species - with petal length of between 1cm and 2cm - with the average being 1.5cm and the average petal width being between 0.1cm and 0.5cm. According to the dataset provided the Iris Versicolor has longer petals starting at 3cm and finishing just over 5cm in length - with the average being 4.00cm. The petal width measurements were between 1.0cm and 1.75cm respectively in the Iris Versicolor, with an average measurement of 1.375cm.
+Petal Length and Width provide much starker sets of information. Iris Setosa's petal sizes, both in width and length were dwarfed by the other two species - with Petal Length of between 1cm and 2cm - with the average being 1.5cm and the average Petal Width being between 0.1cm and 0.5cm. According to the dataset provided the Iris Versicolor has longer petals starting at 3cm and finishing just over 5cm in length - with the average being 4.00cm. The petal width measurements were between 1.0cm and 1.75cm respectively in the Iris Versicolor, with an average measurement of 1.375cm.
 
-According to the dataset the Iris Virginica has much longer and wider petals than the other two species - the average petal length ranged between 5cm and 7cm with the average being 5.5cm, while the petal width went from 1.5cm to 2.5cm - with the average being 2cm in width. Compared to the Setosa the Virginica also has longer sepal length from 5.5cm to 8cm in length. The Sepal width in the Virginica was also fairly average - spanning from 2.5cm to 3.75cm in width with the average reading being 3.0cm.
+According to the dataset the Iris Virginica has much longer and wider petals than the other two species - the average Petal Length ranged between 5cm and 7cm with the average being 5.5cm, while the Petal Width went from 1.5cm to 2.5cm - with the average being 2cm. Compared to the Setosa the Virginica also has longer Sepal Length from 5.5cm to 8cm in length. The Sepal Width in the Virginica was also fairly average - spanning from 2.5cm to 3.75cm in width with the average reading being 3.0cm.
 
-Below shows an example of one of the scatterplots outputted byt he program. It shows a a comparison between Petal Length and Petal Width across the three species:
+Below shows an example of one of the scatterplots outputted by the program. It shows a comparison between Petal Length and Petal Width across the three species:
 
 <p align = "center">
     <img src = "https://github.com/SeanE15/pands-project/blob/main/seanelliottPLPW.png" width = "600" title = "hover text">
@@ -41,15 +41,15 @@ Below shows an example of one of the scatterplots outputted byt he program. It s
 
 **<p align="center"> Walkthrough of Program**
 
-I found this quite a challenging program to write. It combined many aspects of the course which we had covered, but also required me to learn how to use seaborn - which I found to be an excellent tool for data visualisation and analysis. The program starts by reading in the dataset 'iris.data' and outputs a summary of the raw data to a single text file. I then go on to analyse the data in various ways using the 3 species of Iris Flower; Iris Setosa, Iris Virginica and Iris Versicolor.
+I found this quite a challenging program to write. It combined many aspects of the course which we had covered, but also required me to learn how to use seaborn - which I found to be an excellent tool for data visualisation and analysis. The program starts by reading in the dataset 'iris.data' and outputs a summary of the raw data to a single text file. It then goes on to analyse the data in various ways using the data of the 3 species of Iris Flower; Iris Setosa, Iris Virginica and Iris Versicolor.
 
-Using seaborn I started by creating a histogram plot of the three species of flower, comparing sepal length, sepal width, petal length and petal width across the three species. I also then allow the program to save the histograms as .png files to the repository for viewing. I then created a distplot which combines the above histogram with a trendline running through it. I found this to be more visually appealing than just the histogram plot on it's own.
+Using seaborn I started by creating a histogram plot of the three species of flower, comparing sepal length, sepal width, petal length and petal width across the three species. I also ask the program to save the histograms as .png files to the repository for viewing. I then created a distplot which combines the above histogram with a trendline running through it. I found this to be more visually appealing than just the histogram plot on it's own.
 
-I then went on to create a scatterplot of the 3 species which would help me to compare the sepal length/sepal width and the petal length/petal width of the 3 species. There are 6 itterations/comparison scatterplots of the data which are displayed when the program is run. I included a legend with each scatterplot and made sure to correctly label the axes to avoid any confusion.
+I then went on to create 6 scatterplots of the 3 species which would help me to compare the sepal length/sepal width and the petal length/petal width of the 3 species. There are 6 itterations/comparison scatterplots of the data which are displayed when the program is run. I included a legend with each scatterplot and made sure to correctly label the axes to avoid any confusion.
 
-I then created a pairplot - this is a combination all of the above data - combining the scatter plots and also distplots to show all of the information in one place. I found this to be particularly appealing to look at and found that it helped give me a much wider view of the information contained within the dataset.
+I then created a pairplot - this is a combination of all of the above data - combining the scatter plots and also distplots to show all of the information in one plot. I found this to be particularly appealing to look at and found that it helped give me a much wider view of the information contained within the dataset.
 
-I decided to add a boxplot as another challenge to myself to represent the data in a different way than I would have been used to. The boxplot showed some interesting differences between the species - showing that the Iris Setosa has much smaller petals than the other two species. It also clearly shows that the iris Virginica is the larger of the three species with much larger petals and only slightly smaller sepal width.
+I decided to add a boxplot as another challenge to myself to represent the data in a different way. The boxplot showed a much starker representation of the interesting differences between the species - showing that the Iris Setosa has much smaller petals than the other two species. It also clearly shows that the iris Virginica is the larger of the three species with much larger petals and only slightly smaller sepal width.
 
 Finally I added a jointplot which I found in the seaborn documentation. I found this combination of the scatterplot in the centre with the trendlines on the exterior a very appealing way of comparing the data - and used the program to compare Petal Length and Sepal Length.
 
