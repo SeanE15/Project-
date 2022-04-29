@@ -49,9 +49,20 @@ I then went on to create 6 scatterplots of the 3 species which would help me to 
 
 I then created a pairplot - this is a combination of all of the above data - combining the scatter plots and also distplots to show all of the information in one plot. I found this to be particularly appealing to look at and found that it helped give me a much wider view of the information contained within the dataset.
 
+<p align = "center">
+    <img src = "https://github.com/SeanE15/pands-project/blob/main/seanelliottPair.png" width = "600" title = "hover text">
+
 I decided to add a boxplot as another challenge to myself to represent the data in a different way. The boxplot showed a much starker representation of the interesting differences between the species - showing that the Iris Setosa has much smaller petals than the other two species. It also clearly shows that the iris Virginica is the larger of the three species with much larger petals and only slightly smaller sepal width.
 
+<p align = "center">
+    <img src = "https://github.com/SeanE15/pands-project/blob/main/seanelliottBox.png" width = "600" title = "hover text">
+
+
 Finally I added a jointplot which I found in the seaborn documentation. I found this combination of the scatterplot in the centre with the trendlines on the exterior a very appealing way of comparing the data - and used the program to compare Petal Length and Sepal Length.
+
+<p align = "center">
+    <img src = "https://github.com/SeanE15/pands-project/blob/main/seanelliottJoint.png" width = "600" title = "hover text">
+
 
 **<p align="center"> References**
 
