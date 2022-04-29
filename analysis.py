@@ -37,9 +37,14 @@ with open (filename, "r") as f:
     
     print(iris['Type'].value_counts(), file=open("irisSummary.txt", "a"))
     print(' ', file=open("irisSummary.txt", "a"))
-    print(iris.describe, file=open("irisSummary.txt", "a"))
-    print (' ', file=open("irisSummary.txt", "a")) 
+    print(iris.describe(include=[np.number]), file=open("irisSummary.txt", "a"))
+    print(' ', file=open("irisSummary.txt", "a")) 
+    print('The mean values of the three species are displayed below: ', file=open("irisSummary.txt", "a"))
+    print(iris.groupby("Type").mean(), file=open("irisSummary.txt", "a"))
+    print(' ', file=open("irisSummary.txt", "a")) 
+    print('The correlation between the values of the three species are displayed below: ', file=open("irisSummary.txt", "a"))
     print(iris.groupby("Type").corr(), file=open("irisSummary.txt", "a"))
+
 
 # We then start by organising the data within the file to start making sense of the data. This is done below by telling the program the location of the data we wish to seperate and analyse.
 # For example the iris_setosa will be found the in data file provided, under the heading of 'Type' - which the program will group information for those with the distinction 
