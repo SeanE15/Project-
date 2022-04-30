@@ -21,7 +21,8 @@ columns = ['Sepal Length','Sepal Width','Petal Length','Petal Width','Type']
     
 with open (filename, "r") as f: 
     iris = pd.read_csv(filename, sep= ',', header=None, names=columns)
-    
+    iris.head()
+
 # I then ask the program to break the information down into more readable chunks - I do this by asking the program to define the grouping (ie. the 3 different types of flower)
 # so that the user of the program has the data at hand from the offset and the program prints this summary into the irisSummary.txt file.
 
