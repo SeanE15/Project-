@@ -112,3 +112,9 @@ Finally I added a jointplot which I found in the seaborn documentation. I found 
 <https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html>
 
 <https://realpython.com/python-csv/>
+
+
+
+
+
+testing upload 29/09/2022
